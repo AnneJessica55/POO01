@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 1.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Criando uma classe para objetos carro.
+        class Carro {
+
+// Atributos
+marca;
+modelo;
+cor = 'branco';
+
+
+            // Métodos
+            ligar(acao) {
+                if (acao == 'on')
+                    document.write('Vrum vrum!');
+                else
+                    document.write('<br>tic');
+            }
+
+            acendeFarol() {
+                document.write('<br>LUZ!');
+            }
+
+        }
+        
+        
+
+//Se o if tiver apenas um comando, não é necessário colocar entre chaves, porém é obrigtório a utilização de ;
+//Ex: Métodos
+//ligar(acao) {
+//                if (acao == 'ligar') {
+//                    document.write('Vrum vrum!');
+//                    document.write('bibi');
+//                else
+//                    document.write('tic');
+//            }
+
+//        }
+//Atributos
+
+
+//Criando um Objeto -> Instância da classe 'Carro'
+var fusca = new Carro();
+//Identificadores de classe são CaseSensitive, e utiliza o Pascal Case
+//Ex: class Car
+//Ex: class Usuario Do Sistema
+//ler a cor do objeto
+
+ // Alterar atributos.
+ fusca.marca = 'Volkswagem';
+        fusca.modelo = '1300';
+        fusca.cor = 'bege';
+
+        // Ler a cor do objeto.
+        console.log(fusca.marca, fusca.modelo, fusca.cor);
+
+        // Cria novo objeto -> Nova instância de 'Carro'.
+        var opala = new Carro();
+        opala.marca = 'Chevrolet';
+        opala.modelo = 'SS';
+        opala.cor = 'rosa';
+
+        // Consultando objeto
+        console.log(fusca, opala);
+                // Executando método.
+                fusca.ligar('on');
+        opala.ligar('off');
+
+
+    </script>
+
+</body>
+
+</html>
