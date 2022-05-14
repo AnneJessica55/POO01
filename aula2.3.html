@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 2.3</title>
+</head>
+<body>
+    <script>
+        class User{
+            //Atributos privados.
+            #name = '';
+            #email = '';
+            #password = '';
+            //Métodoseta todos os atributos.
+            setUser(userName, userEmail, userSenha){
+                this.#name = userName;
+                this.#email = userEmail;
+                this.#password = userSenha;
+            }
+        }
+            //Instanciando.
+        var admin = new User();
+        admin.setUser('Beiçola Azevedo Josefino','beicolazezefo@fofo.com','12Beicola');
+        //Saída.
+        console.log('admin: ',admin);
+        
+    </script>
+</body>
+</html>

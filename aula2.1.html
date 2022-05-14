@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 2.1</title>
+</head>
+
+<body>
+
+    <script>
+
+// Classe que define usuário.
+        
+        class User {
+            //Atributos públicos.
+            #name = '';
+            #email = '';
+            #password = '';
+            //Método set
+            //this faz referencia ao próprio objeto.
+            setName(name){
+                this.#name = name;
+            }
+            setEmail(email_address) {
+
+        // Valida e-mail
+        if (email_address.indexOf('@') > 0)
+            this.#email = email_address;
+        else
+            console.error('E-mail inválido!');
+
+        }
+        trocaSenha(x) {
+
+        // Valida a senha usando o método privado '#testaSenha()'.
+        if (this.#testaSenha(x))
+            this.#password = x;
+        else
+            console.error('A senha tem que ter "_"');
+        }
+
+/**
+* Método privado que testa a senha.
+* Este método só pode ser 'invocado' por outro método da classe.
+*/
+#testaSenha(pass_word) {
+return (pass_word.indexOf('_') >= 0);
+}
+
+        }
+        //Crie uma instância de "User"
+        //Objetos estão presentes no comando do computador, de forma semelhante a variáveis
+        let jurema = new User();
+        //Define / altera atributos.
+        //Não é seguro quando numa classe o aplicativo pode alterar os atributos de um objeto.
+        jurema.setName('Jurema Cleide Ohana');
+        jurema.setEmail('juremohanacleide@email.com');
+        jurema.trocaSenha('jururu_123456');
+        //Exibir o objeto.
+
+        console.log(jurema);
+        let jairo = new User();
+        jairo.setName('Jairo Jairoso Barroso');
+        jairo.setEmail('jairosojairo@email.com');
+        jairo.trocaSenha('jairosobolado_123');
+        console.log(jairo);
+    </script>
+
+</body>
+
+</html>
