@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 1.2</title>
+</head>
+
+<body>
+
+    <h1>Exercício 1.2</h1>
+    <p>Observe o diagrama de classes abaixo e reproduza-o usando JavaScript:</p>
+
+    <p>Teste a classe.</p>
+    <script>
+        class Carros{
+            #marca;
+            #modelo;
+            #cor;
+            #ano;
+        
+        setMarca(marca){
+       
+        }
+        setModelo(modelo){
+            this.modelo = modelo.trim();
+        }
+        setCor(cor){
+            this.cor = cor.trim();
+        }
+        setAno(ano){
+            this.ano = ano.trim();
+        }
+        getMarca(){
+            return this.marca;
+        }
+        getModelo(){
+            return this.modelo;
+        }
+        getCor(){
+            return this.cor;
+        }
+        getAno(){
+            return this.ano;
+        }
+        }
+        var palio = new Carros();
+        var gol = new Carros();
+        palio.setMarca('FIAT');
+        palio.setModelo('Hatch');
+        palio.setCor('Azul');
+        palio.setAno('2012');
+        gol.setMarca('Volkswagen');
+        gol.setModelo('Hatch');
+        gol.setCor('rosa pink');
+        gol.setAno('2001');
+
+        console.log(palio);
+        document.write(`
+        <p>O Pálio é da marca ${palio.getMarca()}, tem cor ${palio.getCor()}, modelo ${palio.getModelo()} e é do ano de ${palio.getAno()}</p>
+        <p>O Gol é da marca ${gol.getMarca()}, tem cor ${gol.getCor()}, modelo ${gol.getModelo()} e é do ano de ${gol.getAno()}`);
+
+    </script>
+
+</body>
+
+</html>
