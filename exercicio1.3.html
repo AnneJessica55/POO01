@@ -31,6 +31,10 @@
             //Os atributos devem ser privados;
             //Crie 'getters' e 'setters' para todos os atributos que você definir;
             //Crie um 'construtor' que receba os atributos mais importantes;
+            constructor(animalsNome, animalsRaca, animalsTemperamento){
+                this.setNome(animalsNome);
+                this.setRaca(animalsRaca);
+                this.setTemperamento(animalsTemperamento)}  
 
             setRaca(dogRaca){
                 dogRaca = dogRaca;
@@ -59,24 +63,15 @@
             getTemperamento(){
                 return this.#temperamento;
             }
-            constructor(animalsNome, animalsRaca, animalsTemperamento){
-                this.setNome(animalsNome);
-                this.setRaca(animalsRaca);
-                this.setTemperamento(animalsTemperamento)}  
+           
 
 
         }
         //Crie pelo menos 2 objetos instanciando a classe;
         var cachorro2 = new Animals('Demônio do Inferno','Pincher','Raivoso como satanás! Ai, ai, ai, o cachorro me mordeu!' );
         var cachorro1 = new Animals ('Joca', 'SRD','Manso');
-        cachorro1.setRaca('SRD');
         cachorro1.setTamanho('médio');
-        cachorro1.setNome('Jairo');
-        cachorro1.setTemperamento('manso');
-        cachorro2.setRaca('Pincher');
         cachorro2.setTamanho('pequeno');
-        cachorro2.setNome('Demônio do Inferno');
-        cachorro2.setTemperamento('Raivoso como satanás. Ai,ai, ai! Esse bicho me mordeu!');
         document.write(`
         <p>${cachorro1.getNome()} é da raça ${cachorro1.getRaca()}, de porte ${cachorro1.getTamanho()} e é um cão ${cachorro1.getTemperamento()}</p>
         <p>${cachorro2.getNome()} é da raça ${cachorro2.getRaca()}, de porte ${cachorro2.getTamanho()} e é um cão ${cachorro2.getTemperamento()}</p>`)
