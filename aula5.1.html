@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO 5.1</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Produto {
+
+            #origem
+            #preco
+            #marca
+            #codigo
+            #descricao
+
+            constructor(codigo) { this.setCodigo(codigo) }
+
+            setOrigem(origem) { this.#origem = origem }
+            setPreco(preco) { this.#preco = preco }
+            setMarca(marca) { this.#marca = marca }
+            setCodigo(codigo) { this.#codigo = codigo }
+            setDescricao(descricao) { this.#descricao = descricao }
+
+            getOrigem() { return this.#origem }
+            getPreco() { return this.#preco }
+            getMarca() { return this.#marca }
+            getCodigo() { return this.#codigo }
+            getDescricao() { return this.#descricao }
+
+        }
+
+        class Vestuario extends Produto {
+
+            #tipo
+            #tamanho
+            #cor
+
+            constructor(codigo, tipo) {
+                super(codigo) // Executar o construtor da classe pai                
+                this.setTipo(tipo)
+            }
+
+            setTipo(tipo) { this.#tipo = tipo }
+            setTamanho(tamanho) { this.#tamanho = tamanho }
+            setCor(cor) { this.#cor = cor }
+
+            getTipo() { return this.#tipo }
+            getTamanho() { return this.#tamanho }
+            getCor() { return this.#cor }
+
+        }
+
+        class Calca extends Vestuario {
+
+        }
+
+
+        class Alimento extends Produto{
+            #tipo;
+            #peso;
+ 
+            constructor(codigo, tipo, peso){
+                super(codigo)
+                this.setTipo(tipo)
+                this.setPeso(peso)
+                    }
+            setTipo(tipo){this.#tipo = tipo}
+            setPeso(peso){ this.#peso = peso}
+
+            getTipo(){ return this.#tipo}
+            getPeso(){ return this.#peso}
+
+        }
+        class Moveis extends Produto{
+            #material;
+            #classe;
+
+            constructor(codigo, material, classe){
+                super(codigo)
+                this.setMaterial (material)
+                this.setClasse(classe)
+                
+            }
+            setMaterial(material){ this.#material = material}
+            setClasse(classe){this.#classe = classe}
+            getMaterial(){ return this.#material}
+            getClasse(){ return this.#classe}
+        }
+        var bone = new Vestuario('B0N3', 'Chapéu')
+
+        var jeans = new Calca('CODIGO', 'longas')
+ 
+        var bone = new Vestuario('B0N3', 'Chapéu')
+    
+        var qually = new Alimento ('A1245', 'Processado', '500g')
+
+        var escrivaninha = new Moveis('#465d', 'Madeira', 'Mesa')
+
+        console.log(qually, jeans, bone, escrivaninha)
+
+
+    </script>
+
+</body>
+
+</html>
